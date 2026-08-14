@@ -1,6 +1,8 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class BasePage {
     static WebDriver driver;
@@ -16,5 +18,22 @@ public class BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void scrollActions() {
+        Actions actions = new Actions(driver);
+        for (int i = 0; i < 10; i++) {
+            actions.scrollByAmount(0, 500).perform();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public boolean isTextInElementPresent
+            (WebElement element, String text){
+       return element.getText().contains(text);
     }
 }
