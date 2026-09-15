@@ -55,7 +55,7 @@ public class PracticeFormPage extends BasePage {
         typeDateOfBirth(student.getDateOfBirth());
         typeSubjects(student.getSubjects());
         typeHobbies(student.getHobbies());
-        scrollActions();
+        //scrollActions();
         textareaCurAdd.sendKeys(student.getAddress());
         typeStateCity(student.getState(), student.getCity());
         btnSubmit.click();
