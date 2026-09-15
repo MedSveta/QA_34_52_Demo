@@ -38,7 +38,7 @@ public class PracticeFormPage extends BasePage {
     WebElement inputState;
     @FindBy(id = "react-select-4-input")
     WebElement inputCity;
-    @FindBy(xpath = "//button[@id='submit']")
+    @FindBy(xpath = "//button[text()='Submit']")
     WebElement btnSubmit;
     @FindBy(id = "example-modal-sizes-title-lg")
     WebElement modalMessage;
@@ -55,7 +55,7 @@ public class PracticeFormPage extends BasePage {
         typeDateOfBirth(student.getDateOfBirth());
         typeSubjects(student.getSubjects());
         typeHobbies(student.getHobbies());
-        //scrollActions();
+        scrollActions();
         textareaCurAdd.sendKeys(student.getAddress());
         typeStateCity(student.getState(), student.getCity());
         btnSubmit.click();
