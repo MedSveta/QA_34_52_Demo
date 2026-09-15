@@ -30,7 +30,7 @@ jobs:
         shell: pwsh
         run: |
           Get-ChildItem -Path build/reports/tests/scope -Recurse
-          Get-Content build/test-results/scope/*.xml
+          Get-Content build/test-results/smoke/*.xml
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
