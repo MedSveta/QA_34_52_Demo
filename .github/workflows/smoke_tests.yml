@@ -23,8 +23,6 @@ jobs:
         uses: browser-actions/setup-chrome@latest
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '9.0'
       - name: Build with Gradle Wrapper
         run: .\gradlew clean smoke
       - name: Upload Test Reports
