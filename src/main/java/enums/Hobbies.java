@@ -14,4 +14,5 @@ public enum Hobbies {
     public String getLocator() {
         return locator;
     }
+    //
 }
